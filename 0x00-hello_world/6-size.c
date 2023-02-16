@@ -1,0 +1,24 @@
+#include<stdio.h>
+
+/**
+ * main - Entry point
+ * 
+ * Return: Always 0 (Success)
+ */
+int main(void)
+{
+	char a;
+	int b;
+	long int c;
+	long long int d;
+	float e;
+
+       	printf("Size of a char: %d byte\n", size of(a); 
+			printf("Size of an int: %d bytes\n", size of(b);
+				printf("Size of a long int: %d bytes\n", size of(c);
+					printf("Size of a long long int: %d bytes\n", size of(d);
+						printf("Size of a float: %d bytes\n", size of(e);
+	return (0);	
+}
+
+
