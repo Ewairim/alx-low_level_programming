@@ -3,7 +3,7 @@
 /**
  * _strlen - returns length of string
  * @s: parameter used
- * Return: length of string.gcc -Wall -pedantic -Werror -Wextra -std=gnu89 _putchar.c 4-main.c 4-print_rev.c -o 4-print_rev
+ * Return: length of string.
  */
 int _strlen(char *s)
 {
