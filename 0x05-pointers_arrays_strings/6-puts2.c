@@ -1,5 +1,6 @@
 #include "main.h"
-/** puts2 - prints every character of the string
+/**
+ * puts2 - prints every character of the string
  * @str: parameter used
  */
 void puts2(char *str)
@@ -11,7 +12,7 @@ void puts2(char *str)
 	{
 		b++;
 	}
-	for (a = 0; a < b; a +=2)
+	for (a = 0; a < b; a += 2)
 	{
 		_putchar(str[a]);
 	}
