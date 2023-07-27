@@ -10,4 +10,8 @@ void print_number(int n);
 char *infinite_add(char *n1, char *n2, char *r, int size_r);
 void print_buffer(char *b, int size);
 char _putchar(char a);
+<<<<<<< HEAD
 char *leet(char *);
+=======
+char *cap_string(char *);
+>>>>>>> 11bf2bb9aaacf12a68b10c8d0943b53d74721e49
