@@ -9,15 +9,15 @@ char *_strstr(char *haystack, char *needle)
 {
 	for (; *haystack != '\0' ; haystack++)
 	{
-		char *o = haystack;
-		char *p = needle;
+		char *m = haystack;
+		char *n = needle;
 
-		while (*o == *p && *p != '\0')
+		while (*m == *n && *n != '\0')
 		{
-			o++;
-			p++;
+			m++;
+			n++;
 		}
-		if (*p == '\0')
+		if (*n == '\0')
 			return (haystack);
 	}
 	return (0);
