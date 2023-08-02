@@ -1,8 +1,8 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * factorial - calculates factorial 
- * @n: varaible name of number
+ * factorial - calculates factorial
+ * @n: variable name of number
  * Return: -1(error) or factorial
  */
 int factorial(int n)
