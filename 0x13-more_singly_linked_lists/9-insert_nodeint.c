@@ -1,5 +1,21 @@
 #include "lists.h"
 /**
+ * count_len - gets lenght of node
+ * @h: list
+ * Return: count
+ */
+size_t count_len(listint_t *h)
+{
+	size_t count = 0;
+
+	while(h)
+	{
+		count++;
+		h = h->next;
+	}
+	return (count);
+}
+/**
  * insert_nodeint_at_index - insert node at a certain index
  * @idx: position to add node
  * @n: data of new node
@@ -10,6 +26,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
 	listint_t *newnode, *temp;
 	unsigned int i = 0;
+	size_t c = count_len(*head);
 
 	newnode = malloc(sizeof(listint_t));
 	if (newnode == NULL)
@@ -25,12 +42,17 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	}
 
 	temp = *head;
-	while (i < idx - 1)
+	if (idx >= c)
+		return (NULL);
+	else
 	{
-		temp = temp->next;
-		i++;
+		while (i < idx - 1)
+		{
+			temp = temp->next;
+			i++;
+		}
 	}
-	if (temp == NULL || i != idx - 1)
+	if (temp == NULL)
 	{
 		free(newnode);
 		return (NULL);
