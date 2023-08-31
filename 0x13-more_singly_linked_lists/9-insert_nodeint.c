@@ -8,7 +8,7 @@ size_t count_len(listint_t *h)
 {
 	size_t count = 0;
 
-	while(h)
+	while (h)
 	{
 		count++;
 		h = h->next;
@@ -44,15 +44,12 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	temp = *head;
 	if (idx >= c)
 		return (NULL);
-	else
+	while (i < idx - 1)
 	{
-		while (i < idx - 1)
-		{
-			temp = temp->next;
-			i++;
-		}
+		temp = temp->next;
+		i++;
 	}
-	if (temp == NULL)
+	if (temp == NULL || i != idx - 1)
 	{
 		free(newnode);
 		return (NULL);
