@@ -39,7 +39,7 @@ int main(int argc, char *argv[])
 	if (fd_from == -1)
 		exit_with(98, "Error: Can't read from file %s\n", file_from, fd_from);
 
-	fd_to = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0644);
+	fd_to = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 664);
 	if (fd_to == -1)
 		exit_with(99, "Error: Can't write to file %s\n", file_to, fd_to);
 
