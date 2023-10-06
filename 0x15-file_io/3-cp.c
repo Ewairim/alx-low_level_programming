@@ -27,19 +27,21 @@ int main(int argc, char *argv[])
 {
 	int fd_from, fd_to;
 	ssize_t bytes_read;
-	char buffer[BUFFER_SIZE];
+	char *buffer;
 	char *file_from = argv[1];
 	char *file_to = argv[2];
 	struct stat st;
 
 	if (argc != 3)
 		exit_with(97, "Usage: cp file_from file_to\n", "", 0);
-
+	buffer = malloc(sizeof(char) * BUFFER_SIZE);
+	if (!buffer)
+		return (0);
 	fd_from = open(file_from, O_RDONLY);
 	if (fd_from == -1)
 		exit_with(98, "Error: Can't read from file %s\n", file_from, fd_from);
 
-	fd_to = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 664);
+	fd_to = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if (fd_to == -1)
 		exit_with(99, "Error: Can't write to file %s\n", file_to, fd_to);
 
